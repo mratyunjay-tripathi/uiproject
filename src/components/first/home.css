@@ -16,18 +16,9 @@
     font-size: 120%;
 }
 
-/* .logo-black{
-    display: none;
-    height:50px;
-    width:left;
-    float: left;
-    margin: 5px 0;
-} */
-
 .main-nav {
     float: right;
     list-style: none;
-    /* margin-top: 30px; */
 }
 
 .main-nav li {
@@ -59,10 +50,7 @@
     border-width: 0px;
     border-radius: 5px;
     background-color: rgb(10, 6, 226);
-    /* display:  */
     display: flex;
-    /* width:20px; */
-    /* margin-top: 20px; */
 }
 
 .formBtn:hover, .unfocusedBtn:hover, .btnStyle:hover {

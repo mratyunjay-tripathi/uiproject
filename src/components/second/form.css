@@ -1,0 +1,84 @@
+.formSectionnew {
+    background-image: linear-gradient(rgb(0, 0, 0, 0.028) 85%, #fff);
+}
+
+.header {
+    font-weight: 300;
+    font-size: 220%;
+    color: #000;
+    word-spacing: 1px;
+    line-height: 1.5;
+}
+
+.headFocus {
+    color: rgb(10, 6, 226);
+}
+
+.formStylenew {
+    width: 50%;
+    height: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 10px 6px -6px rgba(119, 119, 119, 0.335);
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .formStylenew {
+        width: 400px;
+        height: auto;
+    }
+    .header {
+        font-size: 150%;
+    }
+}
+
+.formImagenew {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+}
+
+.radio, .input {
+    border: 0px solid #fff;
+    font-size: 100%;
+    padding: 15px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+    width: 100%;
+    font-weight: 300;
+}
+
+.radio {
+    border-bottom: 0px;
+}
+
+.inputWrapper {
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.inputContainer {
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    /* display: block; */
+    position: relative;
+    padding-left: 30px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.container input {
+    position: absolute;
+    opacity: 1;
+    top: 10;
+    left: 0;
+    height: 20px;
+    width: 20px;
+}

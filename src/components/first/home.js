@@ -14,7 +14,7 @@ import Discussform from '../../assets/discussform.png';
 import Check from '../../assets/check.png';
 import Loop from '../../assets/loop.png';
 import Stats from '../../assets/stats.png';
-import { logDOM } from '@testing-library/dom';
+import { useState } from 'react';
 
 const features = [{ icon: Toogle, heading: "Built for developers", description: "Landkit is built to make yuor life easier. Variables, build tooling, documentation, and reusable components." },
 {
@@ -35,6 +35,11 @@ const statistics = [{ icon: Loop, heading: "Bootstrap users since the beginning"
 { icon: Code, heading: "Deep understanding of Bootstrap", desc: "We've watched Bootstrap grow up over the years and understand it better than almost anyone." }];
 
 function Home(props) {
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
 
   const buy = () => {
     props.history.push('/ui/form/');
@@ -111,7 +116,6 @@ function Home(props) {
           ))}
           <div>
           </div>
-
         </div>
         <hr className="line"></hr>
       </div>
@@ -128,19 +132,21 @@ function Home(props) {
                   <form action="" className='inputContainer'>
                     <div className="inputWrapper">
                       <input type="text" className="input"
-                        placeholder="Name" />
+                        placeholder="Name" onChange={(e) => setName(e.target.value)} />
                     </div>
                     <div className="inputWrapper">
                       <input type="email" className="input"
-                        placeholder="Email" />
+                        placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
                     </div>
                     <div className="inputWrapper">
                       <input type="password"
-                        placeholder="Password"
+                        placeholder="Password" onChange={(e) => setPassword(e.target.value)}
                         className="input" />
                     </div>
                     <div className="inputWrapper">
-                      <button className="formBtn">
+                      <button className="formBtn" onClick={() =>
+                        window.alert(
+                          `Name:${name}\nEmail:${email}\nPassword:${password}`)}>
                         Download a sample
                     </button>
                     </div>
@@ -212,11 +218,11 @@ function Home(props) {
             </div>
           </div>
           <div className="span-1-of-2">
-                <div className="statisticsImage">
-                <div className="positionStats">
-                  <img src={Stats} className="image"/>
-                </div>
-                </div>
+            <div className="statisticsImage">
+              <div className="positionStats">
+                <img src={Stats} className="image" />
+              </div>
+            </div>
           </div>
         </div>
 
