@@ -31,6 +31,10 @@ body{
   /* align-items: center; */
 }
 
+input:focus{
+  outline: none;
+  background:transparent;
+}
 
 /*--------Grid Style------*/
 .span-2-of-2 {
